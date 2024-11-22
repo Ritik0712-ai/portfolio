@@ -1,0 +1,26 @@
+/* Weather App Card */
+.project {
+  width: 300px;
+  padding: 20px;
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.project p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
