@@ -1,26 +1,121 @@
-/* Weather App Card */
-.project {
-  width: 300px;
-  padding: 20px;
-  background: linear-gradient(to right, #89f7fe, #66a6ff);
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 a {
-  text-decoration: none;
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.project p {
-  font-size: 1rem;
-  line-height: 1.5;
+.app-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Typing Test */
+.test-container {
+  margin: 20px 0;
+}
+
+.text-area {
+  padding: 15px;
+  background: #333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#text-to-type {
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/* Stats and Controls */
+.stats {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #45a049;
+}
+
+/* Leaderboard */
+.leaderboard {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+  text-align: center;
+}
+
+#leaderboard h2 {
+  margin-bottom: 15px;
+}
+
+#leaderboard ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#leaderboard ul li {
+  margin: 5px 0;
+}
+
+#close-leaderboard {
+  background: #e74c3c;
+}
+textarea.error {
+  border: 2px solid #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
