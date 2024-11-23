@@ -1,44 +1,147 @@
-/* Projects Section */
-#projects {
-  padding: 50px;
-  text-align: center;
-  background-color: #f8f9fa;
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.project-container {
+body {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  color: #fff;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.project {
-  width: 300px;
+.container {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff10;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background: #1e90ff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 10px;
   padding: 20px;
-  background: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #f4f4f4;
+  border-bottom: 2px solid #ccc;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-  font-size: 1.3rem;
-  color: #007bff;
-  margin-bottom: 10px;
-}
-
-.project h3 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.project p {
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
   font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+}
+
+.input-section button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #1e90ff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-section button:hover {
+  background: #4682b4;
+}
+
+/* Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #ffffff30;
+  margin: 5px 0;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#task-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#task-list li:hover {
+  background: #ffffff50;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.delete-btn {
+  background: #ff5c5c;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ff3333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #1e90ff;
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+/* Additional styling for due date and overdue tasks */
+.due-date {
+  font-size: 0.9rem;
+  color: #ff4500;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.overdue {
+  background: #ff4c4c50 !important;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.input-section input[type="date"],
+.input-section input[type="time"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  color: #333;
 }
