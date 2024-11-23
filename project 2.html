@@ -1,7 +1,42 @@
-<div class="project">
-  <h3>
-    <link rel="stylesheet" href="./project.css"> 
-    <a href="https://www.accuweather.com/en/in/sehore/189094/weather-forecast/189094" target="_blank">Weather App</a>
-  </h3>
-  <p>A beautifully designed weather app that displays real-time weather data when connected to an API.</p>
-  <script src="./project.js"></script> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Typing Speed Test</h1>
+        </header>
+        <main>
+            <div class="test-container">
+                <div class="text-area">
+                    <p id="text-to-type"></p>
+                </div>
+                <textarea id="user-input" placeholder="Start typing here..." autofocus></textarea>
+            </div>
+            <div class="stats">
+                <p><strong>Time Left:</strong> <span id="timer">60</span>s</p>
+                <p><strong>WPM:</strong> <span id="wpm">0</span></p>
+                <p><strong>Accuracy:</strong> <span id="accuracy">0</span>%</p>
+            </div>
+            <div class="controls">
+                <button id="restart-btn">Restart</button>
+                <button id="leaderboard-btn">Show Leaderboard</button>
+            </div>
+        </main>
+        <div class="leaderboard" id="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+            <button id="close-leaderboard">Close</button>
+        </div>
+        <footer>
+            <p>&copy; 2024 Typing Speed Test</p>
+        </footer>
+    </div>
+    <script src="./project.js"></script>
+</body>
+</html>
